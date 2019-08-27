@@ -1,0 +1,207 @@
+@font-face {
+    font-family: "FiraCode";
+    src: url("../resources/FiraCode-Regular.ttf");
+}
+
+#binclk {
+    width: 660px;
+    display: grid;
+    grid-gap:10px;
+    grid-template-columns: 100px 100px 20px 100px 100px 20px 100px 100px;
+    grid-template-areas:    "A1 B1 . C1 D1 . E1 F1"
+    "A2 B2 . C2 D2 . E2 F2"
+    "A3 B3 . C3 D3 . E3 F3"
+    "A4 B4 . C4 D4 . E4 F4";
+    justify-content: center;
+    /*background-color: rgba(250, 250 , 250, 0.05);*/
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px;
+
+}
+
+body{
+    text-align: center;
+    background-color: white;
+    font-family: "FiraCode";
+}
+
+div {
+    padding: 0px;
+    margin: 0px;
+}
+
+p {
+    padding: 0px;
+    margin: 0px;
+}
+
+.placeholder{
+    background-color: rgba(0,0,0,0);
+    height: 100px;
+}
+
+.hours {
+    background-color: lightgrey;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.minutes {
+    background-color: lightgrey;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.seconds {
+    background-color: lightgrey;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.realclock{
+    color: white;
+    margin-top: 20px;
+    height: 100px;
+    background-color: blue;
+    font-size: xx-large;
+    border-radius: 10px;
+}
+
+.on{
+    height: 100px;
+    background-color: #333333;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px blue;
+}
+
+.off{
+    height: 100px;
+    background-color: #BBBBBB;
+    border-radius: 50%;
+}
+
+#placeholder_hrs1{grid-area: A1;}
+#placeholder_hrs2{grid-area: A2;}
+#hrst0{grid-area: A3;}
+#hrst1{grid-area: A4;}
+
+#hrss0{grid-area: B1;}
+#hrss1{grid-area: B2;}
+#hrss2{grid-area: B3;}
+#hrss3{grid-area: B4}
+
+#placeholder_mins{grid-area: C1;}
+#mint0{grid-area: C2;}
+#mint1{grid-area: C3;}
+#mint2{grid-area: C4;}
+
+#mins0{grid-area: D1;}
+#mins1{grid-area: D2;}
+#mins2{grid-area: D3;}
+#mins3{grid-area: D4;}
+
+#placeholder_secs{grid-area: E1;}
+#sect0{grid-area: E2;}
+#sect1{grid-area: E3;}
+#sect2{grid-area: E4}
+
+#secs0{grid-area: F1;}
+#secs1{grid-area: F2;}
+#secs2{grid-area: F3;}
+#secs3{grid-area: F4;}
+
+#below{
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 220px 220px 220px;
+    grid-gap: 10px;
+    grid-template-areas:    "RC RC RC"
+    "SW1 SW2 SW3";
+}
+
+#realclock{
+    grid-area: RC;
+    font-size: 5em;
+    color: white;
+    padding: auto;
+    vertical-align: middle;
+    line-height: 100px;
+}
+
+.pinvisible {
+    display: none;
+}
+
+.switch{
+    background-color: rgba(0,0,255,0.4);
+    color: white;
+    font-size: 1.2em;
+    height: 30px;
+    border-radius: 10px;
+    vertical-align: middle;
+    line-height: 30px;
+}
+
+.switch:hover{
+    background-color: rgba(0,0,255,1);
+}
+
+.swsel{
+    background-color: rgba(0,0,255,1);
+    color: white;
+    font-size: 1.2em;
+    height: 30px;
+    border-radius: 10px;
+    vertical-align: middle;
+    line-height: 30px;
+}
+
+#selector{
+    padding: 10px;
+    width: 150px;
+    background-color: rgba(255,255,255,0.3);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border-top-left-radius: 10px;
+    text-align: left;
+}
+
+#selector:hover{
+    background-color: rgba(255,255,255,1);
+
+}
+
+#custom{
+    padding: 10px;
+    width: 150px;
+    background-color: rgba(255,255,255,0.3);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-top-right-radius: 10px;
+}
+
+
+#custom:hover{
+    background-color: rgba(255,255,255,1);
+}
+
+#tb_custoff{
+    width: 50px;
+    border-radius: 3px;
+    text-align: center;
+}
+#btn_custoff{
+    width: 35px;
+    height: 20px;
+    padding: 0px;
+    margin: 0px;
+}
+
+#fromUTC{
+    font-size: 0.8em;
+    line-height: 20px;
+}

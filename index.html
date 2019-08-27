@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Binary Clock</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" id="csslink" href="css/dark.css">
+        <script src="js/main.js"></script>
+    </head>
+    <body onload="siteReady()">
+        <div id="binclk">
+
+            <div class="placeholder" id="placeholder_hrs1"></div>
+            <div class="placeholder" id="placeholder_hrs2"></div>
+            <div class="off" id="hrst0"></div>
+            <div class="off" id="hrst1"></div>
+            <div class="off" id="hrss0"></div>
+            <div class="off" id="hrss1"></div>
+            <div class="off" id="hrss2"></div>
+            <div class="off" id="hrss3"></div>
+
+
+            <div class="placeholder" id="placeholder_mins"></div>
+            <div class="off" id="mint0"></div>
+            <div class="off" id="mint1"></div>
+            <div class="off" id="mint2"></div>
+            <div class="off" id="mins0"></div>
+            <div class="off" id="mins1"></div>
+            <div class="off" id="mins2"></div>
+            <div class="off" id="mins3"></div>
+
+            <div class="placeholder" id="placeholder_secs"></div>
+            <div class="off" id="sect0"></div>
+            <div class="off" id="sect1"></div>
+            <div class="off" id="sect2"></div>
+            <div class="off" id="secs0"></div>
+            <div class="off" id="secs1"></div>
+            <div class="off" id="secs2"></div>
+            <div class="off" id="secs3"></div>
+
+        </div>
+
+        <div id="below">
+            <div class="realclock" id="realclock" onclick="HideClock()"><p id="timetime"></p></div>
+
+            <div class="switch" id="SW1" onclick="SwitchToBigAppleTime()"><p>New York</p></div>
+            <div class="switch, swsel" id="SW2" onclick="SwitchToMoeMoeTime()"><p>Mödling</p></div>
+            <div class="switch" id="SW3" onclick="SwitchToAussieTime()"><p>Melbourne</p></div>
+        </div>
+
+    <form id="selector">
+        <input type="radio" name="colorselector" id="light" value="light" onchange="SwapColorTheme()"> Light Mode <br>
+        <input type="radio" name="colorselector" id="dark" value="dark" checked="selected" onchange="SwapColorTheme()"> Dark Mode
+    </form>
+    <form id="custom" onsubmit="DoStuff(event)">
+        <label>&nbsp;Custom Offset:<br>
+            <p id="fromUTC">from UTC</p></label>
+        <input type="text" id="tb_custoff">
+        <button type="button" id="btn_custoff" value="GO" onclick="DoStuff(event)">GO</button>
+    </form>
+
+
+
+    </body>
+</html>
